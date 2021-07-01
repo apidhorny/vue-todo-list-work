@@ -6,14 +6,22 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/',
-        name: 'Create',
+        name: 'create',
         component: () => import('/src/views/Create.vue'),
     },
     {
         path: '/list',
-        name: 'List',
+        name: 'list',
         component: () => import('/src/views/List.vue'),
     },
+<<<<<<< HEAD
+=======
+    {
+        path: '/task/:id',
+        name: 'task',
+        component: () => import('@/views/Task.vue'),
+    },
+>>>>>>> e8c8bd6fad38b57c3f176d0e0107aad895bc3c31
 ];
 
 const router = new VueRouter({
