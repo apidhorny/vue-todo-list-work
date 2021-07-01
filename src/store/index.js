@@ -20,6 +20,7 @@ export default new Vuex.Store({
     },
     getters: {
         tasks: (s) => s.tasks,
+        taskById: (s) => (id) => s.tasks.find((t) => t.id === id),
     },
     modules: {},
 });

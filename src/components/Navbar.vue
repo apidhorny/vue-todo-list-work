@@ -9,9 +9,6 @@
                 <router-link tag="li" to="/list" active-class="active"
                     ><a href="#">List</a></router-link
                 >
-                <router-link tag="li" to="/task/:id" active-class="active"
-                    ><a href="#">:Task</a></router-link
-                >
             </ul>
         </div>
     </nav>
