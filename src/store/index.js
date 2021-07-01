@@ -25,7 +25,14 @@ export default new Vuex.Store({
         comleteTask(state, id) {
             const idx = state.tasks.findIndex((t) => t.id === id);
             state.tasks[idx].status = 'completed';
-            localStorage.setItem('tasks', JSON.stringify(state.tasks));
+            localStorage
+                .setItem('tasks', JSON.stringify(state.tasks))
+                .map((task) => {
+                    if ((new Date(task.date), new Date())) {
+                        task.status = 'outdated';
+                    }
+                    return task;
+                });
         },
     },
     actions: {

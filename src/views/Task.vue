@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <div>
-        <h1>ss</h1>
-        <!-- <p @click="tass">sdfsdf</p> -->
-=======
     <div class="row">
         <div v-if="task" class="col s6 offset-s3">
             <h1>{{ task.title }}</h1>
@@ -25,19 +20,23 @@
                 </div>
 
                 <input type="text" ref="datepicker" />
-
-                <button class="btn" type="submit" style="margin-right: 1rem">
-                    Update
-                </button>
-                <button class="btn blue" type="button" @click="comleteTask">
-                    Complete Task
-                </button>
+                <div v-if="task.status !== 'completed'">
+                    <button
+                        class="btn"
+                        type="submit"
+                        style="margin-right: 1rem"
+                    >
+                        Update
+                    </button>
+                    <button class="btn blue" type="button" @click="comleteTask">
+                        Complete Task
+                    </button>
+                </div>
             </form>
         </div>
         <div v-else>
             <p>No ToDo</p>
         </div>
->>>>>>> e8c8bd6fad38b57c3f176d0e0107aad895bc3c31
     </div>
 </template>
 
@@ -49,8 +48,6 @@ export default {
             return this.$store.getters.taskById(+this.$route.params.id);
         },
     },
-<<<<<<< HEAD
-=======
     data: () => ({
         description: '',
         chips: null,
@@ -94,6 +91,5 @@ export default {
             this.chips.destroy();
         }
     },
->>>>>>> e8c8bd6fad38b57c3f176d0e0107aad895bc3c31
 };
 </script>
