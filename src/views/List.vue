@@ -27,9 +27,10 @@
                         <router-link
                             tag="button"
                             class="btn btn-small"
-                            :to="'/task/ + task.id'"
-                            >Open</router-link
+                            :to="'/task/' + task.id"
                         >
+                            Open
+                        </router-link>
                     </td>
                 </tr>
             </tbody>
